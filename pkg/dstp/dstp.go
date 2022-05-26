@@ -81,9 +81,9 @@ func testTLS(ctx context.Context, wg *sync.WaitGroup, address common.Address, t 
 	expiresAfter := time.Until(notAfter)
 	expiry := math.Round(expiresAfter.Hours() / 24)
 	if expiry > 0 {
-		output += fmt.Sprintf("certificate is valid for %v more days", expiry)
+		output += fmt.Sprintf("%v", expiry)
 	} else {
-		output += fmt.Sprintf("the certificate expired %v days ago", -expiry)
+		output += fmt.Sprintf("%v", -expiry)
 	}
 
 	result.Mu.Lock()

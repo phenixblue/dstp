@@ -25,7 +25,7 @@ type Result struct {
 	Ping      string `json:"ping"`
 	DNS       string `json:"dns"`
 	SystemDNS string `json:"system_dns"`
-	TLS       string `json:"tls"`
+	TLS       string `json:"tls_days"`
 	HTTPS     string `json:"https"`
 
 	Mu sync.Mutex `json:"-"`
